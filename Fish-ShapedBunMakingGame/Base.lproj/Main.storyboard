@@ -1,24 +1,165 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bKh-g9-kBq">
+    <device id="retina6_5" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Fish_ShapedBunMakingGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="시작" translatesAutoresizingMaskIntoConstraints="NO" id="KOs-eS-sRQ">
+                                <rect key="frame" x="0.0" y="44" width="896" height="370"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KOs-eS-sRQ" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="8Ge-gn-aBl"/>
+                            <constraint firstItem="KOs-eS-sRQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ku6-Iz-YoS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="KOs-eS-sRQ" secondAttribute="top" id="ch1-Kj-kaI"/>
+                            <constraint firstAttribute="trailing" secondItem="KOs-eS-sRQ" secondAttribute="trailing" id="ruB-ud-BfX"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-1114.2857142857142" y="0.0"/>
+        </scene>
+        <!--How To Play View Controller-->
+        <scene sceneID="agE-DY-u7T">
+            <objects>
+                <viewController id="Aio-If-dB9" customClass="HowToPlayViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XwZ-Uq-wnU">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="게임방법" translatesAutoresizingMaskIntoConstraints="NO" id="PLf-Dx-SOI">
+                                <rect key="frame" x="0.0" y="44" width="896" height="370"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aio-V9-1Hn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PLf-Dx-SOI" firstAttribute="bottom" secondItem="XwZ-Uq-wnU" secondAttribute="bottom" id="26Y-e0-vAR"/>
+                            <constraint firstAttribute="trailing" secondItem="PLf-Dx-SOI" secondAttribute="trailing" id="MQc-WJ-uaN"/>
+                            <constraint firstItem="aio-V9-1Hn" firstAttribute="top" secondItem="PLf-Dx-SOI" secondAttribute="top" id="Mmr-TC-vSJ"/>
+                            <constraint firstItem="PLf-Dx-SOI" firstAttribute="leading" secondItem="XwZ-Uq-wnU" secondAttribute="leading" id="b1n-z3-noE"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mAU-Mp-Vmy" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-396" y="0.0"/>
+        </scene>
+        <!--Ranking View Controller-->
+        <scene sceneID="K88-6o-4hh">
+            <objects>
+                <viewController id="tKG-ol-Uj2" customClass="RankingViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZiI-gm-Lje">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="랭킹" translatesAutoresizingMaskIntoConstraints="NO" id="sl1-Un-NMF">
+                                <rect key="frame" x="0.0" y="44" width="896" height="370"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EBK-7D-iq0"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sl1-Un-NMF" firstAttribute="bottom" secondItem="ZiI-gm-Lje" secondAttribute="bottom" id="2El-qX-lNW"/>
+                            <constraint firstItem="EBK-7D-iq0" firstAttribute="top" secondItem="sl1-Un-NMF" secondAttribute="top" id="F6v-Oe-9HA"/>
+                            <constraint firstAttribute="trailing" secondItem="sl1-Un-NMF" secondAttribute="trailing" id="aHN-Vu-jdR"/>
+                            <constraint firstItem="sl1-Un-NMF" firstAttribute="leading" secondItem="ZiI-gm-Lje" secondAttribute="leading" id="rOY-kG-GEz"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SDT-u4-8NV" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-387" y="799"/>
+        </scene>
+        <!--Game Play View Controller-->
+        <scene sceneID="X26-dv-mBg">
+            <objects>
+                <viewController id="bKh-g9-kBq" customClass="GamePlayViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HKT-lm-jTK">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="duF-FW-DCr">
+                                <rect key="frame" x="0.0" y="44" width="896" height="370"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ua-xv-4ZH" userLabel="상단view">
+                                        <rect key="frame" x="0.0" y="0.0" width="896" height="120"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZFF-1u-GaJ" userLabel="틀">
+                                        <rect key="frame" x="0.0" y="116" width="641" height="254"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.98294013739999997" green="0.79833465810000004" blue="0.40263071659999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hmB-uG-w0w"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="duF-FW-DCr" secondAttribute="bottom" id="2cB-D0-o5W"/>
+                            <constraint firstItem="duF-FW-DCr" firstAttribute="top" secondItem="hmB-uG-w0w" secondAttribute="top" id="IqI-fM-hya"/>
+                            <constraint firstItem="8ua-xv-4ZH" firstAttribute="top" secondItem="hmB-uG-w0w" secondAttribute="top" id="Kbw-oN-HkD"/>
+                            <constraint firstItem="hmB-uG-w0w" firstAttribute="trailing" secondItem="8ua-xv-4ZH" secondAttribute="trailing" id="XiY-Ze-Usq"/>
+                            <constraint firstItem="8ua-xv-4ZH" firstAttribute="leading" secondItem="hmB-uG-w0w" secondAttribute="leading" id="a6G-fs-QBB"/>
+                            <constraint firstAttribute="trailing" secondItem="duF-FW-DCr" secondAttribute="trailing" id="mXe-RB-hjF"/>
+                            <constraint firstAttribute="leading" secondItem="duF-FW-DCr" secondAttribute="leading" id="z0V-Hw-OPk"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="896" height="414"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HWc-dL-lhh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1114.2857142857142" y="776.81159420289862"/>
+        </scene>
+        <!--Game Result View Controller-->
+        <scene sceneID="YBl-tJ-Ik3">
+            <objects>
+                <viewController id="zL3-r2-1ng" customClass="GameResultViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qee-YV-n2G">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="참고 view" translatesAutoresizingMaskIntoConstraints="NO" id="x9i-f3-kDJ">
+                                <rect key="frame" x="0.0" y="24" width="896" height="366"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LeE-BC-L61"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gba-HB-8tY" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1114" y="1626"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="게임방법" width="726" height="546"/>
+        <image name="랭킹" width="727" height="550"/>
+        <image name="시작" width="727" height="549"/>
+        <image name="참고 view" width="729" height="548"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

@@ -12,10 +12,10 @@
 		35E84316296C5AA40093D203 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E84315296C5AA40093D203 /* ViewController.swift */; };
 		35E84319296C5AA40093D203 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35E84317296C5AA40093D203 /* Main.storyboard */; };
 		35E8431B296C5AA50093D203 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35E8431A296C5AA50093D203 /* Assets.xcassets */; };
-		35E8431E296C5AA50093D203 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35E8431C296C5AA50093D203 /* LaunchScreen.storyboard */; };
 		35E84329296C5AA50093D203 /* Fish_ShapedBunMakingGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E84328296C5AA50093D203 /* Fish_ShapedBunMakingGameTests.swift */; };
 		35E84333296C5AA50093D203 /* Fish_ShapedBunMakingGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E84332296C5AA50093D203 /* Fish_ShapedBunMakingGameUITests.swift */; };
 		35E84335296C5AA50093D203 /* Fish_ShapedBunMakingGameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E84334296C5AA50093D203 /* Fish_ShapedBunMakingGameUITestsLaunchTests.swift */; };
+		35E84342296C5CFC0093D203 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35E84341296C5CFC0093D203 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,13 +42,13 @@
 		35E84315296C5AA40093D203 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		35E84318296C5AA40093D203 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		35E8431A296C5AA50093D203 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		35E8431D296C5AA50093D203 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35E8431F296C5AA50093D203 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35E84324296C5AA50093D203 /* Fish-ShapedBunMakingGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fish-ShapedBunMakingGameTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35E84328296C5AA50093D203 /* Fish_ShapedBunMakingGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fish_ShapedBunMakingGameTests.swift; sourceTree = "<group>"; };
 		35E8432E296C5AA50093D203 /* Fish-ShapedBunMakingGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fish-ShapedBunMakingGameUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35E84332296C5AA50093D203 /* Fish_ShapedBunMakingGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fish_ShapedBunMakingGameUITests.swift; sourceTree = "<group>"; };
 		35E84334296C5AA50093D203 /* Fish_ShapedBunMakingGameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fish_ShapedBunMakingGameUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		35E84341296C5CFC0093D203 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +99,11 @@
 		35E84310296C5AA40093D203 /* Fish-ShapedBunMakingGame */ = {
 			isa = PBXGroup;
 			children = (
-				35E84311296C5AA40093D203 /* AppDelegate.swift */,
-				35E84313296C5AA40093D203 /* SceneDelegate.swift */,
-				35E84315296C5AA40093D203 /* ViewController.swift */,
+				35E84343296C8A830093D203 /* Delegate */,
+				35E84344296C8A940093D203 /* ViewController */,
 				35E84317296C5AA40093D203 /* Main.storyboard */,
+				35E84341296C5CFC0093D203 /* Launch Screen.storyboard */,
 				35E8431A296C5AA50093D203 /* Assets.xcassets */,
-				35E8431C296C5AA50093D203 /* LaunchScreen.storyboard */,
 				35E8431F296C5AA50093D203 /* Info.plist */,
 			);
 			path = "Fish-ShapedBunMakingGame";
@@ -125,6 +124,23 @@
 				35E84334296C5AA50093D203 /* Fish_ShapedBunMakingGameUITestsLaunchTests.swift */,
 			);
 			path = "Fish-ShapedBunMakingGameUITests";
+			sourceTree = "<group>";
+		};
+		35E84343296C8A830093D203 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				35E84313296C5AA40093D203 /* SceneDelegate.swift */,
+				35E84311296C5AA40093D203 /* AppDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		35E84344296C8A940093D203 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				35E84315296C5AA40093D203 /* ViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,8 +247,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35E8431E296C5AA50093D203 /* LaunchScreen.storyboard in Resources */,
 				35E8431B296C5AA50093D203 /* Assets.xcassets in Resources */,
+				35E84342296C5CFC0093D203 /* Launch Screen.storyboard in Resources */,
 				35E84319296C5AA40093D203 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,14 +319,6 @@
 				35E84318296C5AA40093D203 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		35E8431C296C5AA50093D203 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				35E8431D296C5AA50093D203 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -442,8 +450,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -469,8 +477,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
