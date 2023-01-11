@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35C11437296DC93D00997CC4 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C11435296DC93D00997CC4 /* GameViewController.swift */; };
+		35C11438296DC93D00997CC4 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35C11436296DC93D00997CC4 /* GameViewController.xib */; };
+		35C1143C296DC9B800997CC4 /* GameEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C1143A296DC9B800997CC4 /* GameEndViewController.swift */; };
+		35C1143D296DC9B800997CC4 /* GameEndViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35C1143B296DC9B800997CC4 /* GameEndViewController.xib */; };
 		35E84312296C5AA40093D203 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E84311296C5AA40093D203 /* AppDelegate.swift */; };
 		35E84314296C5AA40093D203 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E84313296C5AA40093D203 /* SceneDelegate.swift */; };
 		35E84316296C5AA40093D203 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E84315296C5AA40093D203 /* ViewController.swift */; };
@@ -36,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		35C11435296DC93D00997CC4 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		35C11436296DC93D00997CC4 /* GameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
+		35C1143A296DC9B800997CC4 /* GameEndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEndViewController.swift; sourceTree = "<group>"; };
+		35C1143B296DC9B800997CC4 /* GameEndViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameEndViewController.xib; sourceTree = "<group>"; };
 		35E8430E296C5AA40093D203 /* Fish-ShapedBunMakingGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fish-ShapedBunMakingGame.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35E84311296C5AA40093D203 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35E84313296C5AA40093D203 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +84,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35C11434296DC91D00997CC4 /* GameView */ = {
+			isa = PBXGroup;
+			children = (
+				35C11435296DC93D00997CC4 /* GameViewController.swift */,
+				35C11436296DC93D00997CC4 /* GameViewController.xib */,
+			);
+			path = GameView;
+			sourceTree = "<group>";
+		};
+		35C11439296DC99D00997CC4 /* GameEndView */ = {
+			isa = PBXGroup;
+			children = (
+				35C1143A296DC9B800997CC4 /* GameEndViewController.swift */,
+				35C1143B296DC9B800997CC4 /* GameEndViewController.xib */,
+			);
+			path = GameEndView;
+			sourceTree = "<group>";
+		};
 		35E84305296C5AA40093D203 = {
 			isa = PBXGroup;
 			children = (
@@ -99,9 +125,10 @@
 		35E84310296C5AA40093D203 /* Fish-ShapedBunMakingGame */ = {
 			isa = PBXGroup;
 			children = (
+				35E84344296C8A940093D203 /* StartView */,
+				35C11434296DC91D00997CC4 /* GameView */,
+				35C11439296DC99D00997CC4 /* GameEndView */,
 				35E84343296C8A830093D203 /* Delegate */,
-				35E84344296C8A940093D203 /* ViewController */,
-				35E84317296C5AA40093D203 /* Main.storyboard */,
 				35E84341296C5CFC0093D203 /* Launch Screen.storyboard */,
 				35E8431A296C5AA50093D203 /* Assets.xcassets */,
 				35E8431F296C5AA50093D203 /* Info.plist */,
@@ -135,12 +162,13 @@
 			path = Delegate;
 			sourceTree = "<group>";
 		};
-		35E84344296C8A940093D203 /* ViewController */ = {
+		35E84344296C8A940093D203 /* StartView */ = {
 			isa = PBXGroup;
 			children = (
+				35E84317296C5AA40093D203 /* Main.storyboard */,
 				35E84315296C5AA40093D203 /* ViewController.swift */,
 			);
-			path = ViewController;
+			path = StartView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +278,8 @@
 				35E8431B296C5AA50093D203 /* Assets.xcassets in Resources */,
 				35E84342296C5CFC0093D203 /* Launch Screen.storyboard in Resources */,
 				35E84319296C5AA40093D203 /* Main.storyboard in Resources */,
+				35C1143D296DC9B800997CC4 /* GameEndViewController.xib in Resources */,
+				35C11438296DC93D00997CC4 /* GameViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +304,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35C1143C296DC9B800997CC4 /* GameEndViewController.swift in Sources */,
+				35C11437296DC93D00997CC4 /* GameViewController.swift in Sources */,
 				35E84316296C5AA40093D203 /* ViewController.swift in Sources */,
 				35E84312296C5AA40093D203 /* AppDelegate.swift in Sources */,
 				35E84314296C5AA40093D203 /* SceneDelegate.swift in Sources */,

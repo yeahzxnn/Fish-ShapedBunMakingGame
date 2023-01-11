@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="X4z-gq-lSb">
+    <device id="retina6_5" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Irx-Nv-2Nt">
+            <objects>
+                <viewController wantsFullScreenLayout="YES" id="X4z-gq-lSb" customClass="ViewController" customModule="CarrotFarmGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e6a-Vf-UrK">
+                        <rect key="frame" x="0.0" y="0.0" width="750" height="400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="게임방법" translatesAutoresizingMaskIntoConstraints="NO" id="KAh-PP-tfk">
+                                <rect key="frame" x="0.0" y="0.0" width="750" height="400"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2vq-Zy-frN">
+                                <rect key="frame" x="258.66666666666669" y="341" width="207" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="Brm-96-9nO"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" backgroundImage="Start"/>
+                                <connections>
+                                    <action selector="clickedGameStart:" destination="X4z-gq-lSb" eventType="touchUpInside" id="YLa-Sl-p3F"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NKr-2j-Pup"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KAh-PP-tfk" firstAttribute="top" secondItem="e6a-Vf-UrK" secondAttribute="top" id="3b4-v4-jhz"/>
+                            <constraint firstAttribute="centerX" secondItem="KAh-PP-tfk" secondAttribute="centerX" id="KiP-zZ-pAI"/>
+                            <constraint firstAttribute="bottom" secondItem="2vq-Zy-frN" secondAttribute="bottom" constant="28" id="WB5-Q6-MDP"/>
+                            <constraint firstItem="KAh-PP-tfk" firstAttribute="leading" secondItem="e6a-Vf-UrK" secondAttribute="leading" id="a3b-Lm-zkI"/>
+                            <constraint firstAttribute="bottom" secondItem="KAh-PP-tfk" secondAttribute="bottom" id="eIx-Ps-XRE"/>
+                            <constraint firstAttribute="trailing" secondItem="KAh-PP-tfk" secondAttribute="trailing" id="eNl-o3-UyQ"/>
+                            <constraint firstAttribute="centerX" secondItem="KAh-PP-tfk" secondAttribute="centerX" id="iME-ea-BQs"/>
+                            <constraint firstItem="2vq-Zy-frN" firstAttribute="width" secondItem="KAh-PP-tfk" secondAttribute="width" multiplier="0.262667" constant="10" id="lDm-Pe-7lr"/>
+                            <constraint firstItem="2vq-Zy-frN" firstAttribute="centerX" secondItem="e6a-Vf-UrK" secondAttribute="centerX" constant="-13" id="u1G-dD-D2g"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="750" height="400"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hd3-gX-HLk" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1062.7232142857142" y="-28.985507246376812"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Start" width="197" height="41"/>
+        <image name="게임방법" width="726" height="546"/>
+    </resources>
+</document>
