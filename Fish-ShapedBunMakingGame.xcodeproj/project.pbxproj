@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3542F49E296F25B1009E5926 /* DataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3542F49D296F25B1009E5926 /* DataType.swift */; };
 		35C11437296DC93D00997CC4 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C11435296DC93D00997CC4 /* GameViewController.swift */; };
 		35C11438296DC93D00997CC4 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35C11436296DC93D00997CC4 /* GameViewController.xib */; };
 		35C1143C296DC9B800997CC4 /* GameEndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C1143A296DC9B800997CC4 /* GameEndViewController.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3542F49D296F25B1009E5926 /* DataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataType.swift; sourceTree = "<group>"; };
 		35C11435296DC93D00997CC4 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		35C11436296DC93D00997CC4 /* GameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
 		35C1143A296DC9B800997CC4 /* GameEndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEndViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				35C11439296DC99D00997CC4 /* GameEndView */,
 				35E84343296C8A830093D203 /* Delegate */,
 				35E84341296C5CFC0093D203 /* Launch Screen.storyboard */,
+				3542F49D296F25B1009E5926 /* DataType.swift */,
 				35E8431A296C5AA50093D203 /* Assets.xcassets */,
 				35E8431F296C5AA50093D203 /* Info.plist */,
 			);
@@ -305,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35C1143C296DC9B800997CC4 /* GameEndViewController.swift in Sources */,
+				3542F49E296F25B1009E5926 /* DataType.swift in Sources */,
 				35C11437296DC93D00997CC4 /* GameViewController.swift in Sources */,
 				35E84316296C5AA40093D203 /* ViewController.swift in Sources */,
 				35E84312296C5AA40093D203 /* AppDelegate.swift in Sources */,
