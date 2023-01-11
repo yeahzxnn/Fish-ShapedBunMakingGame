@@ -28,6 +28,13 @@ class GameViewController: UIViewController {
     @IBOutlet weak var redBeanButton: UIButton!
     @IBOutlet weak var handButton: UIButton!
     
+    
+    //재료 image
+    @IBOutlet weak var FishDough: UIImageView!
+    @IBOutlet weak var redBean: UIImageView!
+    @IBOutlet weak var hand: UIImageView!
+    
+    
     //붕어빵 틀
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
@@ -38,8 +45,21 @@ class GameViewController: UIViewController {
     @IBOutlet weak var finishedBreadLabel: UILabel!
     
     
+    
+    //붕어빵 이미지
+    @IBOutlet weak var image1: UIImageView!
+    @IBOutlet weak var image2: UIImageView!
+    @IBOutlet weak var image3: UIImageView!
+    @IBOutlet weak var image4: UIImageView!
+    
+    @IBOutlet weak var image5: UIImageView!
+    @IBOutlet weak var image6: UIImageView!
+    
     //붕어빵 전체 타이머
     @IBOutlet weak var gameTimerProgressView: UIProgressView!
+    
+    
+    
     
     
     //목숨개수 코드
@@ -89,7 +109,7 @@ class GameViewController: UIViewController {
 
     //붕어빵 지급하기
     
-    @IBAction func giveBreadButton(_ sender:UIButton) {
+    @IBAction func giveBreadButton(_ sender: UIButton) {
         if finishedBreadCount >= orderCount! {
             //보유 붕어빵과 스코어 계산
             finishedBreadCount -= orderCount!
@@ -362,7 +382,7 @@ class GameViewController: UIViewController {
     func updateTrayImgae(state: TrayState, trayNumber: String) {
         switch trayNumber {
         case "1":
-            button1. = UIImage(named: state.rawValue)
+            image1.image = UIImage(named: state.rawValue)
         case "2":
             image2.image = UIImage(named: state.rawValue)
         case "3":
@@ -377,6 +397,7 @@ class GameViewController: UIViewController {
             return
         }
     }
+
     
     // 재료 선택 버튼
     @objc func didTouchedIngredientsButton(_ sender: UIButton) {
@@ -384,13 +405,13 @@ class GameViewController: UIViewController {
         switch sender {
         case FishDoughButton:
             selectedIngredients = .반죽
-            addBorderToImage(FishDoughImage)
+            addBorderToImage(FishDough)
         case redBeanButton:
             selectedIngredients = .팥
-            addBorderToImage(redBeanImage)
+            addBorderToImage(redBean)
         default:
             selectedIngredients = .손
-            addBorderToImage(handImage)
+            addBorderToImage(hand)
         }
     }
     
