@@ -78,8 +78,8 @@ class GameViewController: UIViewController {
     //스코어 코드
     var score : Int = 0
     
-    //고객이 주문한 붕어빵
-    var orderCount: Int?
+//    //고객이 주문한 붕어빵
+//    var orderCount: Int?
     
     //완성된 붕어빵 수량
     var finishedBreadCount: Int = 0
@@ -102,12 +102,14 @@ class GameViewController: UIViewController {
     
     let globalQueue = DispatchQueue.global()
     
-
+    var orderCount: Int?
+    
+    
     //붕어빵 지급하기
     
     @IBAction func giveBreadButton(_ sender: UIButton) {
         if finishedBreadCount >= orderCount! {
-            //보유 붕어빵과 스코어 계산
+            
             finishedBreadCount -= orderCount!
             score += 100 * orderCount!
             updateNumberOfBread()
@@ -115,25 +117,25 @@ class GameViewController: UIViewController {
             
             //붕어빵 N개 사라짐
             self.customerOrder.isHidden = true
-            
-            //손님 타이머와 루프 해제
-//            // 손님 타이머와 루프 해제
-//            customerTimer.invalidate()
-//            customerLoopSwitch = false
-            
+           
         }else{
-            score -= 100
+            score -= 500
             updateScore()
         }
     }
+    
+    
     
     // MARK: - View Did Load
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // burnTimer들 배열로 저장
-        burnTimers = [burnTimer1, burnTimer2, burnTimer3, burnTimer4, burnTimer5, burnTimer6]
+        orderCount = getRandomNumber()
+        customerOrder.text = "붕어빵 \(orderCount!)개 주세요."
+         
+//        // burnTimer들 배열로 저장
+//        burnTimers = [burnTimer1, burnTimer2, burnTimer3, burnTimer4, burnTimer5, burnTimer6]
         
         // 붕어빵 버튼들에 함수 연결
         button1.addTarget(self, action: #selector(didTouchedTrayButton(_:)), for: .touchUpInside)
@@ -154,6 +156,7 @@ class GameViewController: UIViewController {
     
     // MARK: - View Did Appear
     override func viewDidAppear(_ animated: Bool) {
+        
         mainLoop()
     }
     
@@ -178,6 +181,7 @@ class GameViewController: UIViewController {
         
         print("게임종료!!!!!!!!!!!!!!!!!")
         
+        //게임종료되고 화면 넘어가기
         DispatchQueue.main.async {
             guard let resultVC = self.storyboard?.instantiateViewController(withIdentifier: "GameEndViewContoller") as? GameEndViewContoller else {
                 return
@@ -215,6 +219,12 @@ class GameViewController: UIViewController {
                 gameTimerProgressView.setProgress(gameTimerProgressView.progress - 0.01, animated: true)
             }
         } else {
+            // 목숨 1 깎기
+            heartPoint -= 1
+            if heartPoint == 0 {
+                gameOver()
+            }
+        }
             gameOver()
         }
     }
@@ -224,64 +234,64 @@ class GameViewController: UIViewController {
         return Int.random(in: 1...6)
     }
     
-    // 붕어빵 태우는지 여부 확인하는 타이머
-    var burnTimer1 = Timer()
-    var burnTimer2 = Timer()
-    var burnTimer3 = Timer()
-    var burnTimer4 = Timer()
-    var burnTimer5 = Timer()
-    var burnTimer6 = Timer()
-    var burnTimers: [Timer] = []
-    var burnTimersCount: [Int] = [0, 0, 0, 0, 0, 0]
-    var burnLoopSwitch: [Bool] = [false, false, false, false, false, false]
-    
-    // 붕어빵이 다 익으면 작동할 타이머
-    // 1번째 붕어빵 트레이면 매개변수로 0을 받도록 할것
-    func burnLoop(_ index: Int) {
-        burnTimersCount[index] = 0
-        
-        globalQueue.async { [weak self] in
-            guard let self = self else {
-                return
-            }
-            self.burnLoopSwitch[index] = true
-            let runLoop = RunLoop.current
-            
-            self.burnTimers[index] = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.burnTimerCounter(_:)), userInfo: ["index": index], repeats: true)
-            
-            while self.burnLoopSwitch[index] {
-                runLoop.run(until: Date().addingTimeInterval(0.1))
-            }
-        }
-    }
-    
-    // 타는지 여부 확인할 타이머 카운터
-    @objc func burnTimerCounter(_ timer: Timer) {
-        guard let receivedData = timer.userInfo as? Dictionary<String, Int> else {
-            return
-        }
-        let index: Int = receivedData["index"]!
-        
-        burnTimersCount[index] += 1
-        if burnTimersCount[index] == breadBurnTime {
-            burnLoopSwitch[index] = false
-            burnTimers[index].invalidate()
-            currentTrayState[String(index+1)] = .탐
+//    // 붕어빵 태우는지 여부 확인하는 타이머
+//    var burnTimer1 = Timer()
+//    var burnTimer2 = Timer()
+//    var burnTimer3 = Timer()
+//    var burnTimer4 = Timer()
+//    var burnTimer5 = Timer()
+//    var burnTimer6 = Timer()
+//    var burnTimers: [Timer] = []
+//    var burnTimersCount: [Int] = [0, 0, 0, 0, 0, 0]
+//    var burnLoopSwitch: [Bool] = [false, false, false, false, false, false]
+//
+//    // 붕어빵이 다 익으면 작동할 타이머
+//    // 1번째 붕어빵 트레이면 매개변수로 0을 받도록 할것
+//    func burnLoop(_ index: Int) {
+//        burnTimersCount[index] = 0
+//
+//        globalQueue.async { [weak self] in
+//            guard let self = self else {
+//                return
+//            }
+//            self.burnLoopSwitch[index] = true
+//            let runLoop = RunLoop.current
+//
+//            self.burnTimers[index] = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.burnTimerCounter(_:)), userInfo: ["index": index], repeats: true)
+//
+//            while self.burnLoopSwitch[index] {
+//                runLoop.run(until: Date().addingTimeInterval(0.1))
+//            }
+//        }
+//    }
+//
+//    // 타는지 여부 확인할 타이머 카운터
+//    @objc func burnTimerCounter(_ timer: Timer) {
+//        guard let receivedData = timer.userInfo as? Dictionary<String, Int> else {
+//            return
+//        }
+//        let index: Int = receivedData["index"]!
+//
+//        burnTimersCount[index] += 1
+//        if burnTimersCount[index] == breadBurnTime {
+//            burnLoopSwitch[index] = false
+//            burnTimers[index].invalidate()
+//            currentTrayState[String(index+1)] = .탐
 //            print("\(index+1)번 붕어빵 탔어요.")
-        }
-    }
-    
-    // 시간 맞춰서 뒤집으면 burn timer 멈추는 함수
-    func stopBurnTimer(_ index: Int) {
-        burnLoopSwitch[index] = false
-        burnTimers[index].invalidate()
-    }
+//        }
+//    }
+//
+//    // 시간 맞춰서 뒤집으면 burn timer 멈추는 함수
+//    func stopBurnTimer(_ index: Int) {
+//        burnLoopSwitch[index] = false
+//        burnTimers[index].invalidate()
+//    }
     
     // 붕어빵 틀 눌리면 동작할 함수
     @objc func didTouchedTrayButton(_ sender: UIButton) {
         // 눌린 버튼(sender)의 titleLabel을 가져와서 눌린 붕어빵 틀 정보 저장
         let buttonKey: String = (sender.titleLabel?.text)!
-        let trayIndex: Int = Int(buttonKey)! - 1
+//        let trayIndex: Int = Int(buttonKey)! - 1
         
         // 현재 붕어빵 틀의 상태를 가져옴
         let trayState: TrayState = currentTrayState[buttonKey]!
@@ -307,8 +317,8 @@ class GameViewController: UIViewController {
                     Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: { _ in
                         // 뒤집고 2초 후 붕어빵 틀 상태 변경
                         self.currentTrayState[buttonKey] = .뒤집기2가능
-                        // 다 익으면 동시에 burn timer 시작
-                        self.burnLoop(trayIndex)
+//                        // 다 익으면 동시에 burn timer 시작
+//                        self.burnLoop(trayIndex)
                     })
                     runLoop.run(until: Date().addingTimeInterval(8))
                 }
@@ -317,7 +327,7 @@ class GameViewController: UIViewController {
         case .뒤집기2가능:
             if selectedIngredients == .손 {
                 // 전단계에서 진행되던 burn timer 멈춤
-                stopBurnTimer(trayIndex)
+//                stopBurnTimer(trayIndex)
                 
                 currentTrayState[buttonKey] = .뒤집기2
                 updateTrayImgae(state: .뒤집기2, trayNumber: buttonKey)
@@ -325,35 +335,35 @@ class GameViewController: UIViewController {
                     let runLoop = RunLoop.current
                     Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: { _ in
                         self.currentTrayState[buttonKey] = .뒤집기3가능
-                        self.burnLoop(trayIndex)
+//                        self.burnLoop(trayIndex)
                     })
                     runLoop.run(until: Date().addingTimeInterval(8))
                 }
             }
         case .뒤집기3가능:
             if selectedIngredients == .손 {
-                stopBurnTimer(trayIndex)
+//                stopBurnTimer(trayIndex)
                 currentTrayState[buttonKey] = .뒤집기3
                 updateTrayImgae(state: .뒤집기3, trayNumber: buttonKey)
                 globalQueue.async {
                     let runLoop = RunLoop.current
                     Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: { _ in
                         self.currentTrayState[buttonKey] = .뒤집기4가능
-                        self.burnLoop(trayIndex)
+//                        self.burnLoop(trayIndex)
                     })
                     runLoop.run(until: Date().addingTimeInterval(8))
                 }
             }
         case .뒤집기4가능:
             if selectedIngredients == .손 {
-                stopBurnTimer(trayIndex)
+//                stopBurnTimer(trayIndex)
                 currentTrayState[buttonKey] = .뒤집기4
                 updateTrayImgae(state: .뒤집기4, trayNumber: buttonKey)
-                burnLoop(trayIndex)
+//                burnLoop(trayIndex)
             }
         case .뒤집기4:
             if selectedIngredients == .손 {
-                stopBurnTimer(trayIndex)
+//                stopBurnTimer(trayIndex)
                 currentTrayState[buttonKey] = .비어있음
                 updateTrayImgae(state: .비어있음, trayNumber: buttonKey)
                 finishedBreadCount += 1

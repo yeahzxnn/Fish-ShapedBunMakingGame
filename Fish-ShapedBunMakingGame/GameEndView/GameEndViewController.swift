@@ -16,6 +16,8 @@ class GameEndViewContoller: UIViewController {
     var score: Int?
     
     
+    
+    
     @IBAction func closeButton(_ sender: UIButton) {
         // 2개의 view 동시에 dismiss
         self.presentingViewController?.presentingViewController?.dismiss(animated: false, completion: nil)
