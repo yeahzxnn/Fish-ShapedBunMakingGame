@@ -4,7 +4,7 @@
 //
 //  Created by 신예진 on 2023/01/09.
 //
-
+import Foundation
 import UIKit
 
 class ViewController: UIViewController {

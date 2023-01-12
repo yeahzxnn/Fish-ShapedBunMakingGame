@@ -16,16 +16,16 @@ enum Ingredients {
 
 // 빵틀 상태 열거형
 enum TrayState: String {
-    case 비어있음 = "붕어빵 빈틀.png"
-    case 반죽 = "붕어빵 반죽.png"
+    case 비어있음 = "붕어빵 빈틀.jpg"
+    case 반죽 = "붕어빵 반죽.jpg"
     case 팥 = "붕어빵 팥.png"
-    case 뒤집기1 = "붕어빵 뒤집1.png"
-    case 뒤집기2 = "붕어빵 뒤집2.png"
-    case 뒤집기3 = "붕어빵 뒤집3.png"
-    case 뒤집기4 = "붕어빵 뒤집4.png"
+    case 뒤집기1 = "붕어빵 뒤집1.jpg"
+    case 뒤집기2 = "붕어빵 뒤집2.jpg"
+    case 뒤집기3 = "붕어빵 뒤집3.jpg"
+    case 뒤집기4 = "붕어빵 뒤집4.jpg"
     case 뒤집기2가능 = "2가능"
     case 뒤집기3가능 = "3가능"
     case 뒤집기4가능 = "4가능"
     case 탐 = "붕어빵 탐"
-    case 탄거확인 = "붕어빵 탐.png"
+    case 탄거확인 = "붕어빵 탐.jpg"
 }

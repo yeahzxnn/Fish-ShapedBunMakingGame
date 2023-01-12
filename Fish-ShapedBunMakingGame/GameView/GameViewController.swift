@@ -58,10 +58,6 @@ class GameViewController: UIViewController {
     //붕어빵 전체 타이머
     @IBOutlet weak var gameTimerProgressView: UIProgressView!
     
-    
-    
-    
-    
     //목숨개수 코드
     var heartPoint: Int = 3 {
         willSet {
@@ -271,7 +267,7 @@ class GameViewController: UIViewController {
             burnLoopSwitch[index] = false
             burnTimers[index].invalidate()
             currentTrayState[String(index+1)] = .탐
-            print("\(index+1)번 붕어빵 탔어요.")
+//            print("\(index+1)번 붕어빵 탔어요.")
         }
     }
     
