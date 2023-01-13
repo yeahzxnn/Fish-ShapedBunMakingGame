@@ -78,8 +78,8 @@ class GameViewController: UIViewController {
     //스코어 코드
     var score : Int = 0
     
-//    //고객이 주문한 붕어빵
-//    var orderCount: Int?
+    //    //고객이 주문한 붕어빵
+    //    var orderCount: Int?
     
     //완성된 붕어빵 수량
     var finishedBreadCount: Int = 0
@@ -117,7 +117,7 @@ class GameViewController: UIViewController {
             
             //붕어빵 N개 사라짐
             self.customerOrder.isHidden = true
-           
+            
         }else{
             score -= 500
             updateScore()
@@ -133,9 +133,9 @@ class GameViewController: UIViewController {
         
         orderCount = getRandomNumber()
         customerOrder.text = "붕어빵 \(orderCount!)개 주세요."
-         
-//        // burnTimer들 배열로 저장
-//        burnTimers = [burnTimer1, burnTimer2, burnTimer3, burnTimer4, burnTimer5, burnTimer6]
+        
+        //        // burnTimer들 배열로 저장
+        //        burnTimers = [burnTimer1, burnTimer2, burnTimer3, burnTimer4, burnTimer5, burnTimer6]
         
         // 붕어빵 버튼들에 함수 연결
         button1.addTarget(self, action: #selector(didTouchedTrayButton(_:)), for: .touchUpInside)
@@ -175,9 +175,6 @@ class GameViewController: UIViewController {
         mainTimer.invalidate()
         mainTimerSwitch = false
         
-        //고객 타이머 해제
-//        customerTimer.invalidate()
-//        customerLoopSwitch = false
         
         print("게임종료!!!!!!!!!!!!!!!!!")
         
@@ -213,18 +210,12 @@ class GameViewController: UIViewController {
     
     @objc func mainTimerCounter() {
         mainCount = mainCount + 1
-                
+        
         if(mainCount<=100){
             DispatchQueue.main.async { [self] in
                 gameTimerProgressView.setProgress(gameTimerProgressView.progress - 0.01, animated: true)
             }
         } else {
-            // 목숨 1 깎기
-            heartPoint -= 1
-            if heartPoint == 0 {
-                gameOver()
-            }
-        }
             gameOver()
         }
     }
@@ -247,7 +238,7 @@ class GameViewController: UIViewController {
 //
 //    // 붕어빵이 다 익으면 작동할 타이머
 //    // 1번째 붕어빵 트레이면 매개변수로 0을 받도록 할것
-//    func burnLoop(_ index: Int) {
+//    @objc func burnLoop(_ index: Int) {
 //        burnTimersCount[index] = 0
 //
 //        globalQueue.async { [weak self] in
@@ -282,7 +273,7 @@ class GameViewController: UIViewController {
 //    }
 //
 //    // 시간 맞춰서 뒤집으면 burn timer 멈추는 함수
-//    func stopBurnTimer(_ index: Int) {
+//    @objc func stopBurnTimer(_ index: Int) {
 //        burnLoopSwitch[index] = false
 //        burnTimers[index].invalidate()
 //    }
@@ -291,7 +282,7 @@ class GameViewController: UIViewController {
     @objc func didTouchedTrayButton(_ sender: UIButton) {
         // 눌린 버튼(sender)의 titleLabel을 가져와서 눌린 붕어빵 틀 정보 저장
         let buttonKey: String = (sender.titleLabel?.text)!
-//        let trayIndex: Int = Int(buttonKey)! - 1
+        let trayIndex: Int = Int(buttonKey)! - 1
         
         // 현재 붕어빵 틀의 상태를 가져옴
         let trayState: TrayState = currentTrayState[buttonKey]!
@@ -317,7 +308,7 @@ class GameViewController: UIViewController {
                     Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: { _ in
                         // 뒤집고 2초 후 붕어빵 틀 상태 변경
                         self.currentTrayState[buttonKey] = .뒤집기2가능
-//                        // 다 익으면 동시에 burn timer 시작
+                        //                        // 다 익으면 동시에 burn timer 시작
 //                        self.burnLoop(trayIndex)
                     })
                     runLoop.run(until: Date().addingTimeInterval(8))
@@ -326,7 +317,6 @@ class GameViewController: UIViewController {
             }
         case .뒤집기2가능:
             if selectedIngredients == .손 {
-                // 전단계에서 진행되던 burn timer 멈춤
 //                stopBurnTimer(trayIndex)
                 
                 currentTrayState[buttonKey] = .뒤집기2
@@ -403,7 +393,7 @@ class GameViewController: UIViewController {
             return
         }
     }
-
+    
     
     // 재료 선택 버튼
     @objc func didTouchedIngredientsButton(_ sender: UIButton) {
@@ -441,5 +431,5 @@ class GameViewController: UIViewController {
     func updateScore() {
         scoreLabel.text = String(score)
     }
-
+    
 }

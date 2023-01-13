@@ -10,8 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameViewController" customModule="Fish_ShapedBunMakingGame" customModuleProvider="target">
             <connections>
-                <outlet property="FishDough" destination="ZiG-ka-15l" id="05b-WR-kOp"/>
-                <outlet property="FishDoughButton" destination="FBC-e6-0Kw" id="V0E-tO-Y7f"/>
+                <outlet property="FishDough" destination="ZiG-ka-15l" id="Ds7-2J-VLC"/>
+                <outlet property="FishDoughButton" destination="FBC-e6-0Kw" id="3OE-ul-OWt"/>
                 <outlet property="button1" destination="OXs-4w-1TY" id="c4H-Ra-kS8"/>
                 <outlet property="button2" destination="BiY-hu-Dxk" id="tsk-0v-Itm"/>
                 <outlet property="button3" destination="yZ6-s5-EQk" id="Jo4-UE-Y2B"/>
@@ -21,8 +21,8 @@
                 <outlet property="customerOrder" destination="cyG-3r-PEi" id="7Pa-Uv-4dl"/>
                 <outlet property="finishedBreadLabel" destination="pPZ-tM-EeE" id="hix-mB-UOF"/>
                 <outlet property="gameTimerProgressView" destination="dUz-yk-L5L" id="uU8-OP-AzO"/>
-                <outlet property="hand" destination="dbV-Mq-hNA" id="4rd-bM-Nw8"/>
-                <outlet property="handButton" destination="ckZ-AY-5Tj" id="LMc-Id-QfW"/>
+                <outlet property="hand" destination="dbV-Mq-hNA" id="JXb-xs-b8y"/>
+                <outlet property="handButton" destination="ckZ-AY-5Tj" id="saI-eu-9MK"/>
                 <outlet property="heart1" destination="gHA-1f-cfP" id="gb4-7R-Eat"/>
                 <outlet property="heart2" destination="BsS-7h-DYT" id="6CZ-Cm-ir6"/>
                 <outlet property="heart3" destination="1AX-qN-hdu" id="Rnz-Yi-svi"/>
@@ -32,9 +32,9 @@
                 <outlet property="image4" destination="xyU-l8-qa5" id="Wc1-q1-YkR"/>
                 <outlet property="image5" destination="BLF-e6-8aD" id="mbq-4U-1XO"/>
                 <outlet property="image6" destination="L6z-lh-oGt" id="nJS-Qf-vDc"/>
-                <outlet property="redBean" destination="sxG-ro-juu" id="Bxg-ez-4cm"/>
-                <outlet property="redBeanButton" destination="T04-kn-GLc" id="3tV-rw-ZRW"/>
-                <outlet property="scoreLabel" destination="ndM-Ma-8S5" id="QVg-MH-vCQ"/>
+                <outlet property="redBean" destination="sxG-ro-juu" id="Ioy-qd-D8l"/>
+                <outlet property="redBeanButton" destination="T04-kn-GLc" id="dgX-YF-VYh"/>
+                <outlet property="scoreLabel" destination="ndM-Ma-8S5" id="ZVp-tm-byR"/>
                 <outlet property="view" destination="VkU-88-xsA" id="wFB-EJ-1rh"/>
             </connections>
         </placeholder>
@@ -223,11 +223,11 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jCI-N3-Z37">
                                     <rect key="frame" x="0.0" y="0.0" width="110" height="53.333333333333336"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="주전자" translatesAutoresizingMaskIntoConstraints="NO" id="ZiG-ka-15l" userLabel="image1">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="주전자" translatesAutoresizingMaskIntoConstraints="NO" id="ZiG-ka-15l" userLabel="FishDough">
                                             <rect key="frame" x="0.0" y="0.0" width="123" height="53.333333333333336"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBC-e6-0Kw">
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FBC-e6-0Kw" userLabel="FishDoughButton">
                                             <rect key="frame" x="0.0" y="0.0" width="123" height="53.333333333333336"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -239,11 +239,11 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iMH-G3-LLT">
                                     <rect key="frame" x="0.0" y="53.333333333333343" width="110" height="54"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="팥" translatesAutoresizingMaskIntoConstraints="NO" id="sxG-ro-juu">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="팥" translatesAutoresizingMaskIntoConstraints="NO" id="sxG-ro-juu" userLabel="redBean">
                                             <rect key="frame" x="0.0" y="0.0" width="123" height="54"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T04-kn-GLc">
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T04-kn-GLc" userLabel="redBeanButton">
                                             <rect key="frame" x="0.0" y="0.0" width="123" height="54"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -255,11 +255,11 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="377-Dc-gnY">
                                     <rect key="frame" x="0.0" y="107.33333333333336" width="110" height="57.666666666666671"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="손" translatesAutoresizingMaskIntoConstraints="NO" id="dbV-Mq-hNA">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="손" translatesAutoresizingMaskIntoConstraints="NO" id="dbV-Mq-hNA" userLabel="hand">
                                             <rect key="frame" x="0.0" y="0.0" width="123" height="61.333333333333336"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckZ-AY-5Tj">
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckZ-AY-5Tj" userLabel="handButton">
                                             <rect key="frame" x="0.0" y="0.0" width="123" height="61.333333333333336"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
