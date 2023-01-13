@@ -18,7 +18,7 @@
             <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="랭킹" translatesAutoresizingMaskIntoConstraints="NO" id="cfC-Qs-aNN">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="랭킹" translatesAutoresizingMaskIntoConstraints="NO" id="cfC-Qs-aNN" customClass="GameEndViewController">
                     <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wVV-zu-jlb" userLabel="closeButton">

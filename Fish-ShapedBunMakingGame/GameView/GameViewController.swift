@@ -72,7 +72,7 @@ class GameViewController: UIViewController {
                     heart1.image = UIImage(systemName: "heart")
                 }
             }
-        }
+        } 
     }
     
     //스코어 코드
@@ -113,13 +113,20 @@ class GameViewController: UIViewController {
             updateScore()
             
             //붕어빵 N개 사라짐
-            self.customerOrder.isHidden = true
+//            self.customerOrder.isHidden = true
+            
+            orderCount = getRandomNumber()
+            customerOrder.text = "붕어빵 \(orderCount!)개 주세요."
             
         }else{
             score -= 500
             updateScore()
+//            orderCount = getRandomNumber()
+//            customerOrder.text = "붕어빵 \(orderCount!)개 주세요."
         }
     }
+    
+    
     
 
     // MARK: - View Did Load
@@ -168,19 +175,22 @@ class GameViewController: UIViewController {
         mainTimer.invalidate()
         mainTimerSwitch = false
         
-        
         print("게임종료!!!!!!!!!!!!!!!!!")
         
         //게임종료되고 화면 넘어가기
         DispatchQueue.main.async {
-            guard let resultVC = self.storyboard?.instantiateViewController(withIdentifier: "GameEndViewContoller") as? GameEndViewContoller else {
-                return
-            }
-            resultVC.score = self.score
-            resultVC.modalPresentationStyle = .overCurrentContext
-            self.present(resultVC, animated: true, completion: nil)
+//            guard let resultVC = self.storyboard?.instantiateViewController(withIdentifier: "GameEndViewContoller") as? GameEndViewContoller
+            
+            
+//            else {
+//                return
+//            }
+//            resultVC.score = self.score
+//            resultVC.modalPresentationStyle = .overCurrentContext
+//            self.present(resultVC, animated: true, completion: nil)
         }
     }
+    
     
     //메인 루프
     func mainLoop() {
@@ -192,6 +202,7 @@ class GameViewController: UIViewController {
             while mainTimerSwitch {
                 runLoop.run(until: Date().addingTimeInterval(0.1))
             }
+            
         }
     }
     
@@ -208,7 +219,11 @@ class GameViewController: UIViewController {
                 gameTimerProgressView.setProgress(gameTimerProgressView.progress - 0.01, animated: true)
             }
         } else {
-            gameOver()
+            let vc = GameEndViewContoller()
+            vc.modalPresentationStyle = .overFullScreen
+            vc.score = score
+            present(vc, animated: false, completion: nil)
+            
         }
     }
     
